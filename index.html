@@ -196,7 +196,7 @@
 			<article class="container box style2">
 				<header>
 					<h2>Sound Activated LEDGrid</h2>
-					<p align="left">This is one of the most fun and satisfying personal projects I have worked on. I used the LEDGrid as the main source of lighting in my room. It is completely customizable in color and brightness, controlled by my Automation Control Center project (more below). I was also able to animate the grid based on the music being played from my computer.
+					<p align="left">This is one of the most fun and satisfying personal projects I have worked on. I used the LEDGrid as the main source of lighting in my room. It is completely customizable in color and brightness, controlled by my Automation Control Center project. I was also able to animate the grid based on the music being played from my computer.
 					<br /><br/>
 					<li align="left"><b><u>The LEDs</u></b> - some cheap 5 meter long, analog <a href="http://www.amazon.com/gp/product/B006LW2NJM?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">LED strips</a> with 300 LEDs/meter stuck with double sided tape to my drop-ceiling support beams.</li>
 					<li align="left"><b><u>The Wiring</u></b> - long CAT5 cables soldered to the LED wiring ran through my drop-ceiling and down behind a support beam near my desk into the control box.</li>
@@ -223,7 +223,7 @@
 			<article class="container box style2">
 				<header>
 					<h2>Home Automation Outlets</h2>
-					<p align="left">Another piece of the puzzle in automating my room, I created these outlet boxes to allow me to control my lights and appliances. Originally, I had relay modules wired between short extension cords cut in half to turn things on and off with an Arduino, but in an effort to make it look a bit nicer (as well as decreasing risk of electrical shock/fire), I decided to squeeze all the components into a box. For the first iteration of these boxes, I ran signal wires from the Arduino sitting at my desk with CAT5 (seen in the picture below on the right), but I later upgraded the boxes to be controlled using RF signals received from my Automation Control Center. Each of the four outlets on each box could be individually toggled on or off via wireless RF signal.
+					<p align="left">Another piece of the puzzle in automating my room, I created these outlet boxes to allow me to control my lights and appliances. Originally, I had relay modules wired between short extension cords cut in half to turn things on and off with an Arduino, but in an effort to make it look a bit nicer (as well as decreasing risk of electrical shock/fire), I decided to squeeze all the components into a box. For the first iteration of these boxes, I ran signal wires from the Arduino sitting at my desk with CAT5 (seen in the picture below on the right), but I later upgraded the boxes to be controlled using RF signals received from my Automation Control Center. Each of the four outlets on each box could be individually toggled on or off via wireless RF signal, and I used the boxes to automate my desk lamp, room accent lighting, computer monitors, and speakers.
 					<br /><br/>
 					<li align="left"><b><u>The Outlets/Enclosure</u></b> - went on a quick Home Depot run and acquired a few <a href="http://www.homedepot.com/p/Leviton-15-Amp-Tamper-Resistant-Duplex-Outlet-White-R62-T5320-00W/100662608">tamper-resistant outlets</a>, a couple <a href="http://www.homedepot.com/p/Raco-1-1-4-in-x-4-in-Deep-Square-Drawn-Box-with-1-2-in-Knockouts-50-Pack-185/203634382">outlet boxes</a> (made to be mounted in-wall but work well enough for my purposes), as well as a couple risers for the boxes and wall-plates for the outlets.</li>
 					<li align="left"><b><u>The Microcontroller</u></b> - because the case was so small, I couldn't fit an entire Arduino board inside, so I bought a couple <a href="http://www.amazon.com/gp/product/B00COGNWXA?psc=1&redirect=true&ref_=oh_aui_detailpage_o02_s00">prototyping PCBs</a> and soldered all of my components to it. I used an <a href="http://www.digikey.com/product-detail/en/0/ATMEGA328-PU-ND">ATMega328</a> sitting on an <a href="http://www.digikey.com/product-detail/en/0/AE10286-ND">IC socket</a> as the brains, powered by a cheap USB wall-wart AC adapter run through a <a href="http://www.digikey.com/product-detail/en/0/NCP7805TGOS-ND">5V voltage regulator</a>. This was connected to a <a href="http://www.amazon.com/gp/product/B00NKAGBTG?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">2.4GHz RF transceiver</a> to receive signals from my Automation Control Center, as well as a <a href="http://www.amazon.com/gp/product/B0057OC5O8?psc=1&redirect=true&ref_=oh_aui_detailpage_o04_s00">4-channel relay module</a> to switch power to the outlets.</li>
@@ -243,6 +243,27 @@
 						<div class="6u"><a href="images/OutletBox1.jpg" class="image fit"><img src="images/OutletBox1.jpg" alt="" title="Home Automation Outlets Pic 1" /></a></div>
 						<div class="6u"><a href="images/OutletBox2.jpg" class="image fit"><img src="images/OutletBox2.jpg" alt="" title="Home Automation Outlets Pic 2" /></a></div>
 					</div>
+				</div>
+			</article>
+
+		<!-- Automation Control Center Project Section -->
+			<article class="container box style2">
+				<header>
+					<h2>Automation Control Center</h2>
+					<p align="left">The main control center that ties both of the above projects together. My vision for everything was to completely automate all the lighting and appliances in my room, and that is what this control center allows me to do. Using the LEDGrid (above) as my main source of lighting in the room, and the Home Automation Outlets to turn everything else on and off, I am able to control almost everything I want to using just this small device mounted by my door like a lightswitch. It allows me to choose between different "modes", and will somewhat intelligently guess what mode I want before touching it. Walking in the room? Use the normal lighting mode to make the LEDGrid a warm shade of white for lighting. Study time? Use the study mode to change the LEDGrid to a brighter white to keep me more awake, as well as turning on my desk lamp. Trying to throw a party? Hit party mode to make the LEDGrid move to the beat of the music, turn on the blacklights, and start up my speakers.
+					<br /><br />
+					<li align="left"><b><u>The Enclosure</u></b> - a <a href="https://www.adafruit.com/products/271">small plastic case</a> capable of holding an Arduino Uno and an LCD.</li>
+					<li align="left"><b><u>The Microcontroller</u></b> - the basic <a href="http://www.amazon.com/Arduino-UNO-board-DIP-ATmega328P/dp/B006H06TVG/ref=sr_1_1?ie=UTF8&qid=1437440718&sr=8-1&keywords=arduino+uno">Arduino Uno</a> plugged into a standard USB wall-wart AC adapter.</li>
+					<li align="left"><b><u>The I/O Devices</u></b> - mounted inside the enclosure I had an <a href="https://www.adafruit.com/products/784">RGB backlit LCD display with serial backpack</a> wired to the internal Arduino, as well as a <a href="http://www.amazon.com/gp/product/B00KHTLWU6?psc=1&redirect=true&ref_=oh_aui_detailpage_o00_s00">rotary encoder</a> with a <a href="http://www.amazon.com/gp/product/B00CQLO2OG?psc=1&redirect=true&ref_=oh_aui_detailpage_o00_s00">knob</a> mounted in the middle for mode selection. There was also a <a href="http://www.amazon.com/gp/product/B00NKAGBTG?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">2.4GHz RF transceiver</a> mounted/wired inside the case so that the control center could talk to my LEDGrid and Home Automation Outlets.</li>
+					</p>
+					<br />
+					<p><i>Pictures coming soon...</i></p>
+				</header>
+				<div class="inner gallery">
+			<!-- 		<div class="row 0%">
+						<div class="6u"><a href="images/EtchASketch1.jpg" class="image fit"><img src="images/EtchASketch1.jpg" alt="" title="Etch-A-Sketch 2.0 Pic 1" /></a></div>
+						<div class="6u"><a href="images/EtchASketch2.jpg" class="image fit"><img src="images/EtchASketch2.jpg" alt="" title="Etch-A-Sketch 2.0 Pic 2" /></a></div>
+					</div> -->
 				</div>
 			</article>
 
