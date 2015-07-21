@@ -188,7 +188,7 @@
 			<article class="container box style2">
 				<header>
 					<h2>Sound Activated LEDGrid</h2>
-					<p align="left">This is one of the most fun and satisfying personal projects I have worked on. I used the LEDGrid as the main source of lighting in my room. It is completely customizable in color and brightness, controlled by my "Automation Control Center" project (more below). I was also able to animate the grid based on the music being played from my computer.<br /><br/>
+					<p align="left">This is one of the most fun and satisfying personal projects I have worked on. I used the LEDGrid as the main source of lighting in my room. It is completely customizable in color and brightness, controlled by my Automation Control Center project (more below). I was also able to animate the grid based on the music being played from my computer.<br /><br/>
 					<li align="left"><b><u>The LEDs</u></b> - some cheap 5 meter long, analog <a href="http://www.amazon.com/gp/product/B006LW2NJM?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">LED strips</a> with 300 LEDs/meter stuck with double sided tape to my drop-ceiling support beams.</li>
 					<li align="left"><b><u>The Wiring</u></b> - long CAT5 cables soldered to the LED wiring ran through my drop-ceiling and down behind a support beam near my desk into the control box.</li>
 					<li align="left"><b><u>The Enclosure/Power</u></b> - an old slim Dell PC case with all the components removed and retrofitted with a <a href="http://www.amazon.com/gp/product/B00D7CWSCG?psc=1&redirect=true&ref_=oh_aui_detailpage_o01_s00">12-volt dedicated power supply</a> to power all 2400 LEDs, as well as an 80mm fan to keep the case cool.</li>
@@ -204,6 +204,24 @@
 					<div class="row 0%">
 						<div class="6u"><a href="images/LEDGridBlue.jpg" class="image fit"><img src="images/LEDGridBlue.jpg" alt="" title="LEDGrid 1" /></a></div>
 						<div class="6u"><a href="images/LEDGridGreen.jpg" class="image fit"><img src="images/LEDGridGreen.jpg" alt="" title="LEDGrid 2" /></a></div>
+					</div>
+				</div>
+			</article>
+
+		<!-- Home Automation Outlets Project Section -->
+			<article class="container box style2">
+				<header>
+					<h2>Home Automation Outlets</h2>
+					<p align="left">Another piece of the puzzle in automating my room, I created these outlet boxes to allow me to control my lights and appliances. Originally, I had relay modules wired between short extension cords cut in half to turn things on and off with an Arduino, but in an effort to make it look a bit nicer (as well as decreasing risk of electrical shock/fire), I decided to squeeze all the components into a box. For the first iteration of these boxes, I ran signal wires from the Arduino sitting at my desk with CAT5 (seen in the picture below on the right), but I later upgraded the boxes to be controlled using RF signals received from my Automation Control Center. Each of the four outlets on each box could be individually toggled on or off via wireless RF signal.<br /><br/>
+					<li align="left"><b><u>The Outlets/Enclosure</u></b> - went on a quick Home Depot run and acquired a few <a href="http://www.homedepot.com/p/Leviton-15-Amp-Tamper-Resistant-Duplex-Outlet-White-R62-T5320-00W/100662608">tamper-resistant outlets</a>, a couple <a href="http://www.homedepot.com/p/Raco-1-1-4-in-x-4-in-Deep-Square-Drawn-Box-with-1-2-in-Knockouts-50-Pack-185/203634382">outlet boxes</a> (made to be mounted in-wall but work well enough for my purposes), as well as a couple risers for the boxes and wall-plates for the outlets.</li>
+					<li align="left"><b><u>The Microcontroller</u></b> - because the case was so small, I couldn't fit an entire Arduino board inside, so I bought a couple <a href="http://www.amazon.com/gp/product/B00COGNWXA?psc=1&redirect=true&ref_=oh_aui_detailpage_o02_s00">prototyping PCBs</a> and soldered all of my components to it. I used an <a href="http://www.digikey.com/product-detail/en/0/ATMEGA328-PU-ND">ATMega328</a> sitting on an <a href="http://www.digikey.com/product-detail/en/0/AE10286-ND">IC socket</a> as the brains, powered by a cheap USB wall-wart AC adapter run through a <a href="http://www.digikey.com/product-detail/en/0/NCP7805TGOS-ND">5V voltage regulator</a>. This was connected to a <a href="http://www.amazon.com/gp/product/B00NKAGBTG?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">2.4GHz RF transceiver</a> to receive signals from my Automation Control Center, as well as a <a href="http://www.amazon.com/gp/product/B0057OC5O8?psc=1&redirect=true&ref_=oh_aui_detailpage_o04_s00">4-channel relay module</a> to switch power to the outlets.</li>
+					<li align="left"><b><u>The Wiring</u></b> - I took an old 3-prong computer power cable, cut off the end, and ran the wires into the outlet box (with a clamp to hold it in). I used some 16 AWG wire and wire-nuts to run the "hot" (black) and ground (green) wires to each outlet, and then ran the neutral (white) wires through the relay module to the outlet so each plug could be individually switched. I also ran wires to the USB wall-wart AC adapter to power the microcontroller.</li>
+					</p>
+				</header>
+				<div class="inner gallery">
+					<div class="row 0%">
+						<div class="6u"><a href="images/OutletBox1.jpg" class="image fit"><img src="images/OutletBox1.jpg" alt="" title="Home Automation Outlets Pic 1" /></a></div>
+						<div class="6u"><a href="images/OutletBox2.jpg" class="image fit"><img src="images/OutletBox2.jpg" alt="" title="Home Automation Outlets Pic 2" /></a></div>
 					</div>
 				</div>
 			</article>
