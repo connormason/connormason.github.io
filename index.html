@@ -183,6 +183,14 @@
 					<h2>Projects</h2>
 				</header>
 			</article>
+
+		<!-- BoozeBot Project Section -->
+			<article class="container box style2">
+				<header>
+					<h2>BoozeBot</h2>
+					<p align="left">A cloud database backed, Raspberry Pi & Arduino controlled cocktail making robot. <i>Currently a work in progress, check back later for more details.</i></p>
+				</header>
+			</article>
 		
 		<!-- LEDGrid Project Section -->
 			<article class="container box style2">
@@ -195,6 +203,8 @@
 					<li align="left"><b><u>The Microcontroller</u></b> - an <a href="http://www.amazon.com/Arduino-UNO-board-DIP-ATmega328P/dp/B006H06TVG/ref=sr_1_1?ie=UTF8&qid=1437440718&sr=8-1&keywords=arduino+uno">Arduino Uno</a> with an attached <a href="https://www.sparkfun.com/products/13116">Spectrum Shield</a> that is connected between my computer audio output and my speakers as a passthrough to grab audio data used for animating the grid.</li>
 					<li align="left"><b><u>The Control Circuitry</u></b> - since the Arduino has a limited number of outputs (and I had 24 channels worth of LEDs), I used two <a href="http://www.ti.com/product/tlc5940">TLC5940</a> chips to add more PWM outputs using a serial bus. Each channel fed into a <a href="http://www.digikey.com/product-detail/en/0/TIP31CFS-ND">transistor</a> that switched an <a href="http://www.digikey.com/product-detail/en/0/FQP13N06L-ND">N-Channel MOSFET</a> to control the LEDs. The MOSFETs were required due to the large amount of power used by the LEDs (up to 1 amp per channel @ 12 volts). I also used an <a href="http://www.digikey.com/product-detail/en/0/ATMEGA328-PU-ND">ATMega328</a> with connected <a href="http://www.amazon.com/gp/product/B00NKAGBTG?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">2.4GHz RF transceiver</a> to receive signals from my Automation Control Center and transmit them to the main Arduino (for remote mode control).</li>
 					</p>
+					<p>A basic sound activated functionality video:</p>
+					<iframe width="560" height="315" src="https://www.youtube.com/embed/rL9zEPIekX4" frameborder="0" allowfullscreen></iframe>
 				</header>
 				<div class="inner gallery">
 					<div class="row 0%">
@@ -216,7 +226,15 @@
 					<li align="left"><b><u>The Outlets/Enclosure</u></b> - went on a quick Home Depot run and acquired a few <a href="http://www.homedepot.com/p/Leviton-15-Amp-Tamper-Resistant-Duplex-Outlet-White-R62-T5320-00W/100662608">tamper-resistant outlets</a>, a couple <a href="http://www.homedepot.com/p/Raco-1-1-4-in-x-4-in-Deep-Square-Drawn-Box-with-1-2-in-Knockouts-50-Pack-185/203634382">outlet boxes</a> (made to be mounted in-wall but work well enough for my purposes), as well as a couple risers for the boxes and wall-plates for the outlets.</li>
 					<li align="left"><b><u>The Microcontroller</u></b> - because the case was so small, I couldn't fit an entire Arduino board inside, so I bought a couple <a href="http://www.amazon.com/gp/product/B00COGNWXA?psc=1&redirect=true&ref_=oh_aui_detailpage_o02_s00">prototyping PCBs</a> and soldered all of my components to it. I used an <a href="http://www.digikey.com/product-detail/en/0/ATMEGA328-PU-ND">ATMega328</a> sitting on an <a href="http://www.digikey.com/product-detail/en/0/AE10286-ND">IC socket</a> as the brains, powered by a cheap USB wall-wart AC adapter run through a <a href="http://www.digikey.com/product-detail/en/0/NCP7805TGOS-ND">5V voltage regulator</a>. This was connected to a <a href="http://www.amazon.com/gp/product/B00NKAGBTG?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">2.4GHz RF transceiver</a> to receive signals from my Automation Control Center, as well as a <a href="http://www.amazon.com/gp/product/B0057OC5O8?psc=1&redirect=true&ref_=oh_aui_detailpage_o04_s00">4-channel relay module</a> to switch power to the outlets.</li>
 					<li align="left"><b><u>The Wiring</u></b> - I took an old 3-prong computer power cable, cut off the end, and ran the wires into the outlet box (with a clamp to hold it in). I used some 16 AWG wire and wire-nuts to run the "hot" (black) and ground (green) wires to each outlet, and then ran the neutral (white) wires through the relay module to the outlet so each plug could be individually switched. I also ran wires to the USB wall-wart AC adapter to power the microcontroller.</li>
+					<br /><br />
 					</p>
+					<div class="row">
+						<div class="4u" align="left">I was bored over winter break and decided to use my Home Automation Outlets for something fun while they weren't busy controlling the lights and applicances in my room:
+						</div>
+						<div class="8u">
+							<iframe width="420" height="315" src="https://www.youtube.com/embed/vqqXgZGhcK8" frameborder="0" allowfullscreen></iframe>
+						</div>
+					</div>
 				</header>
 				<div class="inner gallery">
 					<div class="row 0%">
