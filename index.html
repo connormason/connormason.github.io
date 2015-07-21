@@ -184,10 +184,17 @@
 				</header>
 			</article>
 		
-		<!-- Portfolio -->
+		<!-- LEDGrid Project Section -->
 			<article class="container box style2">
 				<header>
 					<h2>Sound Activated LEDGrid</h2>
+					<p align="left">This is one of the most fun and satisfying personal projects I have worked on. I used the LEDGrid as the main source of lighting in my room. It is completely customizable in color and brightness, controlled by my "Automation Control Center" project (more below). I was also able to animate the grid based on the music being played from my computer.<br /><br/>
+					<li align="left"><b><u>The LEDs</u></b> - some cheap 5 meter long, analog <a href="http://www.amazon.com/gp/product/B006LW2NJM?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">LED strips</a> with 300 LEDs/meter stuck with double sided tape to my drop-ceiling support beams.</li>
+					<li align="left"><b><u>The Wiring</u></b> - long CAT5 cables soldered to the LED wiring ran through my drop-ceiling and down behind a support beam near my desk into the control box.</li>
+					<li align="left"><b><u>The Enclosure/Power</u></b> - an old slim Dell PC case with all the components removed and retrofitted with a <a href="http://www.amazon.com/gp/product/B00D7CWSCG?psc=1&redirect=true&ref_=oh_aui_detailpage_o01_s00">12-volt dedicated power supply</a> to power all 2400 LEDs, as well as an 80mm fan to keep the case cool.</li>
+					<li align="left"><b><u>The Microcontroller</u></b> - an <a href="http://www.amazon.com/Arduino-UNO-board-DIP-ATmega328P/dp/B006H06TVG/ref=sr_1_1?ie=UTF8&qid=1437440718&sr=8-1&keywords=arduino+uno">Arduino Uno</a> with an attached <a href="https://www.sparkfun.com/products/13116">Spectrum Shield</a> that is connected between my computer audio output and my speakers as a passthrough to grab audio data used for animating the grid.</li>
+					<li align="left"><b><u>The Control Circuitry</u></b> - since the Arduino has a limited number of outputs (and I had 24 channels worth of LEDs), I used two <a href="http://www.ti.com/product/tlc5940">TLC5940</a> chips to add more PWM outputs using a serial bus. Each channel fed into a <a href="http://www.digikey.com/product-detail/en/0/TIP31CFS-ND">transistor</a> that switched an <a href="http://www.digikey.com/product-detail/en/0/FQP13N06L-ND">N-Channel MOSFET</a> to control the LEDs. The MOSFETs were required due to the large amount of power used by the LEDs (up to 1 amp per channel @ 12 volts). I also used an <a href="http://www.digikey.com/product-detail/en/0/ATMEGA328-PU-ND">ATMega328</a> with connected <a href="http://www.amazon.com/gp/product/B00NKAGBTG?psc=1&redirect=true&ref_=oh_aui_detailpage_o03_s00">2.4GHz RF transceiver</a> to receive signals from my Automation Control Center and transmit them to the main Arduino (for remote mode control).</li>
+					</p>
 				</header>
 				<div class="inner gallery">
 					<div class="row 0%">
@@ -200,133 +207,20 @@
 					</div>
 				</div>
 			</article>
-		
-		<!-- Generic -->
-		
-			<article class="container box style3">
-				<header>
-					<h2>Generic Box</h2>
-					<p>Just a generic box. Nothing to see here.</p>
-				</header>
-				<section>
-					<header>
-						<h3>Paragraph</h3>
-						<p>This is a subtitle</p>
-					</header>
-					<p>Phasellus nisl nisl, varius id <sup>porttitor sed pellentesque</sup> ac orci. Pellentesque 
-					habitant <strong>strong</strong> tristique <b>bold</b> et netus <i>italic</i> malesuada <em>emphasized</em> ac turpis egestas. Morbi 
-					leo suscipit ut. Praesent <sub>id turpis vitae</sub> turpis pretium ultricies. Vestibulum sit 
-					amet risus elit.</p>
-				</section>
-				<section>
-					<header>
-						<h3>Blockquote</h3>
-					</header>
-					<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget.
-					tempus euismod. Vestibulum ante ipsum primis in faucibus.</blockquote>
-				</section>
-				<section>
-					<header>
-						<h3>Divider</h3>
-					</header>
-					<p>Donec consectetur <a href="#">vestibulum dolor et pulvinar</a>. Etiam vel felis enim, at viverra 
-					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci 
-					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam 
-					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-					posuere cubilia.</p>
-					<hr />
-					<p>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra 
-					ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel. Praesent nec orci 
-					facilisis leo magna. Cras sit amet urna eros, id egestas urna. Quisque aliquam 
-					tempus euismod. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices 
-					posuere cubilia.</p>
-				</section>
-				<section>
-					<header>
-						<h3>Unordered List</h3>
-					</header>
-					<ul class="default">
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-					</ul>
-				</section>
-				<section>
-					<header>
-						<h3>Ordered List</h3>
-					</header>
-					<ol class="default">
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-						<li>Donec consectetur vestibulum dolor et pulvinar. Etiam vel felis enim, at viverra ligula. Ut porttitor sagittis lorem, quis eleifend nisi ornare vel.</li>
-					</ol>
-				</section>
-				<section>
-					<header>
-						<h3>Table</h3>
-					</header>
-					<div class="table-wrapper">
-						<table class="default">
-							<thead>
-								<tr>
-									<th>ID</th>
-									<th>Name</th>
-									<th>Description</th>
-									<th>Price</th>
-								</tr>
-							</thead>
-							<tbody>
-								<tr>
-									<td>45815</td>
-									<td>Something</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>24524</td>
-									<td>Nothing</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>19.99</td>
-								</tr>
-								<tr>
-									<td>45815</td>
-									<td>Something</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>29.99</td>
-								</tr>
-								<tr>
-									<td>24524</td>
-									<td>Nothing</td>
-									<td>Ut porttitor sagittis lorem quis nisi ornare.</td>
-									<td>19.99</td>
-								</tr>
-							</tbody>
-							<tfoot>
-								<tr>
-									<td colspan="3"></td>
-									<td>100.00</td>
-								</tr>
-							</tfoot>
-						</table>
-					</div>
-				</section>
-			</article>
-		
-		
-		<section id="footer">
-			<ul class="icons">
-				<li><a href="https://www.facebook.com/becandl" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-				<li><a href="https://github.com/connormason" class="icon fa-github"><span class="label">Github</span></a></li>
-				<li><a href="https://www.linkedin.com/in/masonconnor" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
-			</ul>
-			<div class="copyright">
-				<ul class="menu">
-					<li>&copy; Connor Alexander Mason. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+
+		<!-- Footer -->
+			<section id="footer">
+				<ul class="icons">
+					<li><a href="https://www.facebook.com/becandl" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
+					<li><a href="https://github.com/connormason" class="icon fa-github"><span class="label">Github</span></a></li>
+					<li><a href="https://www.linkedin.com/in/masonconnor" class="icon fa-linkedin"><span class="label">LinkedIn</span></a></li>
 				</ul>
-			</div>
-		</section>
+				<div class="copyright">
+					<ul class="menu">
+						<li>&copy; Connor Alexander Mason. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</div>
+			</section>
 
 	</body>
 </html>
